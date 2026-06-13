@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Laura Valentina · Calçados & Bolsas · Tubarão–SC</title>
+<meta name="description" content="Laura Valentina — calçados e bolsas para mulheres sofisticadas. Farol Shopping, Tubarão–SC. Fale no WhatsApp e acompanhe no Instagram." />
+
+<!-- Pré-visualização ao compartilhar o link -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Laura Valentina · Calçados & Bolsas · Tubarão" />
+<meta property="og:description" content="Para mulheres sofisticadas e que prezam pela originalidade. Farol Shopping, Tubarão–SC." />
+<meta property="og:url" content="https://www.lauravalentina.com.br/" />
+<!-- DICA: troque pelo link de uma foto bonita da vitrine (1200x630px) -->
+<meta property="og:image" content="https://www.lauravalentina.com.br/capa.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    --magenta:#E5237C;
+    --magenta-deep:#C2185F;
+    --navy:#0E1B33;
+    --navy-soft:#16223E;
+    --sage:#A3BC83;
+    --sage-deep:#8FAA6E;
+    --paper:#FFFFFF;
+    --mist:#F4F2EE;
+    --line:rgba(14,27,51,.12);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0;}
+
+  body{
+    font-family:'Jost',sans-serif;
+    color:var(--navy);
+    background:var(--paper);
+    min-height:100vh;
+    display:flex;justify-content:center;
+    background-image:radial-gradient(125% 60% at 50% -8%, #FFFFFF 0%, #FFFFFF 55%, var(--mist) 100%);
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .stage{
+    width:100%;max-width:440px;
+    padding:50px 26px 40px;
+    display:flex;flex-direction:column;align-items:center;text-align:center;
+  }
+
+  /* ---------- Logo / medalhão ---------- */
+  .badge{
+    width:118px;height:118px;border-radius:50%;
+    background:var(--sage);
+    display:grid;place-items:center;
+    margin-bottom:24px;
+    box-shadow:0 16px 34px -16px rgba(143,170,110,.85);
+    animation:rise .9s ease both;
+    overflow:hidden;
+  }
+  /* Marca aproximada — troque pelo PNG do logo se preferir (veja nota no chat) */
+  .badge svg{width:54px;height:54px;}
+  .mark{fill:none;stroke:var(--magenta);stroke-width:6.5;stroke-linecap:round;stroke-linejoin:round;}
+
+  /* ---------- Cabeçalho ---------- */
+  .eyebrow{
+    font-size:11px;letter-spacing:.34em;text-transform:uppercase;
+    color:var(--magenta);font-weight:500;margin-bottom:16px;
+    animation:rise .9s ease .05s both;
+  }
+  h1{
+    font-family:'Jost',sans-serif;
+    font-weight:500;font-size:33px;line-height:1.05;
+    letter-spacing:.22em;text-transform:uppercase;
+    color:var(--navy);margin:0 0 16px;padding-left:.22em;
+    animation:rise .9s ease .1s both;
+  }
+  .tagline{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:400;
+    font-size:18.5px;line-height:1.45;color:var(--navy);opacity:.82;
+    max-width:300px;
+    animation:rise .9s ease .15s both;
+  }
+  .divider{
+    width:46px;height:2px;background:var(--magenta);
+    margin:24px 0 30px;border-radius:2px;
+    animation:rise .9s ease .2s both;
+  }
+
+  /* ---------- Botões ---------- */
+  .links{width:100%;display:flex;flex-direction:column;gap:13px;}
+  .link{
+    display:flex;align-items:center;gap:14px;width:100%;
+    padding:16px 20px;border-radius:15px;text-decoration:none;
+    font-size:15.5px;letter-spacing:.01em;
+    transition:transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+    animation:rise .9s ease both;
+  }
+  .link:nth-child(1){animation-delay:.26s}
+  .link:nth-child(2){animation-delay:.32s}
+  .link:nth-child(3){animation-delay:.38s}
+  .link:nth-child(4){animation-delay:.44s}
+  .link .ico{flex:0 0 22px;display:grid;place-items:center;}
+  .link .label{flex:1;text-align:left;font-weight:400;}
+  .link .sub{font-size:12px;letter-spacing:.03em;opacity:.72;display:block;margin-top:1px;font-weight:300;}
+  .link .chev{opacity:.5;transition:transform .2s ease;}
+  .link:hover .chev{transform:translateX(3px);}
+
+  /* WhatsApp — principal (magenta da marca) */
+  .link--primary{background:var(--magenta);color:#fff;box-shadow:0 12px 26px -12px rgba(229,35,124,.65);}
+  .link--primary .sub{color:rgba(255,255,255,.8);}
+  .link--primary:hover{background:var(--magenta-deep);transform:translateY(-2px);box-shadow:0 18px 32px -12px rgba(229,35,124,.7);}
+
+  /* Instagram — marinho da marca */
+  .link--navy{background:var(--navy);color:#fff;box-shadow:0 12px 26px -14px rgba(14,27,51,.6);}
+  .link--navy .sub{color:rgba(255,255,255,.72);}
+  .link--navy:hover{background:var(--navy-soft);transform:translateY(-2px);box-shadow:0 18px 32px -14px rgba(14,27,51,.65);}
+
+  /* Secundários — claros com borda */
+  .link--ghost{background:var(--paper);color:var(--navy);border:1px solid var(--line);}
+  .link--ghost .ico{color:var(--magenta);}
+  .link--ghost:hover{transform:translateY(-2px);border-color:var(--magenta);box-shadow:0 14px 28px -16px rgba(14,27,51,.35);}
+
+  /* ---------- Rodapé ---------- */
+  .info{
+    margin-top:30px;font-size:12.5px;letter-spacing:.04em;
+    color:var(--navy);opacity:.62;line-height:1.75;
+    animation:rise .9s ease .5s both;
+  }
+  .info strong{font-weight:500;opacity:.95;}
+  footer{
+    margin-top:32px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--magenta);opacity:.85;font-weight:500;
+    animation:rise .9s ease .55s both;
+  }
+
+  @keyframes rise{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:translateY(0);}}
+  :focus-visible{outline:2px solid var(--magenta);outline-offset:3px;border-radius:8px;}
+  @media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important;}}
+</style>
+</head>
+<body>
+  <main class="stage">
+    <div class="badge" aria-label="Laura Valentina">
+      <svg viewBox="0 0 60 60" aria-hidden="true">
+        <path class="mark" d="M20 14 v22 a8 8 0 0 0 8 8 h4"/>
+        <path class="mark" d="M40 46 V24 a8 8 0 0 0 -8 -8 h-4"/>
+      </svg>
+    </div>
+
+    <p class="eyebrow">Calçados &amp; Bolsas · Farol Shopping</p>
+    <h1>Laura<br>Valentina</h1>
+    <p class="tagline">Para mulheres sofisticadas e que prezam pela originalidade.</p>
+    <span class="divider"></span>
+
+    <nav class="links">
+      <!-- WHATSAPP — confira o número (formato 55 + DDD + número, só dígitos) -->
+      <a class="link link--primary"
+         href="https://wa.me/554830524315?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Laura%20Valentina%20e%20gostaria%20de%20saber%20mais%20%F0%9F%98%8A"
+         target="_blank" rel="noopener">
+        <span class="ico" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.945C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.045zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.71.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        </span>
+        <span class="label">Falar no WhatsApp<span class="sub">Atendimento e pedidos</span></span>
+        <span class="chev" aria-hidden="true">→</span>
+      </a>
+
+      <!-- INSTAGRAM -->
+      <a class="link link--navy" href="https://www.instagram.com/lauravalentinatb/" target="_blank" rel="noopener">
+        <span class="ico" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span class="label">Instagram<span class="sub">@lauravalentinatb · novidades e vitrine</span></span>
+        <span class="chev" aria-hidden="true">→</span>
+      </a>
+
+      <!-- COMO CHEGAR -->
+      <a class="link link--ghost"
+         href="https://www.google.com/maps/search/?api=1&query=Laura+Valentina+Av+Marcolino+Martins+Cabral+2525+Tubar%C3%A3o+SC"
+         target="_blank" rel="noopener">
+        <span class="ico" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.2 7-11a7 7 0 10-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        </span>
+        <span class="label">Como chegar<span class="sub">Farol Shopping · Av. Marcolino M. Cabral, 2525</span></span>
+        <span class="chev" aria-hidden="true">→</span>
+      </a>
+
+      <!-- LIGAR -->
+      <a class="link link--ghost" href="tel:+554830524315">
+        <span class="ico" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6.5 3.5h3l1.5 4.5-2 1.5a12 12 0 005 5l1.5-2 4.5 1.5v3a2 2 0 01-2 2A16 16 0 014.5 5.5a2 2 0 012-2z"/></svg>
+        </span>
+        <span class="label">Ligar para a loja<span class="sub">(48) 3052-4315</span></span>
+        <span class="chev" aria-hidden="true">→</span>
+      </a>
+    </nav>
+
+    <footer>Tubarão/SC</footer>
+  </main>
+</body>
+</html>
